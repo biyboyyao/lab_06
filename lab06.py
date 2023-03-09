@@ -7,3 +7,5 @@ def encoder(password):
         value += str(num)
     return value
 
+def decoder(password):
+    print("Walter White")
