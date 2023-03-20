@@ -8,4 +8,10 @@ def encoder(password):
     return value
 
 def decoder(password):
-    print("Walter White")
+    ans = str()
+    for i in password:
+        num = int(i) - 3
+        if num < 0:
+            num += 10
+        ans += str(num)
+    return ans
