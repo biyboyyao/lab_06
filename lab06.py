@@ -1,4 +1,11 @@
-# Yao
+def menu():
+    print("Menu")
+    print("-------------")
+    print("1. Encode")
+    print("2. Decode")
+    print("3. Quit")
+
+# Yaotian Zhang
 def encoder(password):
     value = str()
     for i in password:
@@ -16,3 +23,23 @@ def decoder(password):
             num += 10
         ans += str(num)
     return ans
+
+def main():
+    while True:
+
+        menu()
+
+        operation = int(input("Please enter an option: "))
+
+        if operation == 1:
+            password = input("Please enter your password to encode: ")
+            print("Your password has been encoded and stored!")
+
+        if operation == 2:
+            print(f"The encoded password is {encoder(password)}, and the original password is {decoder(encoder(password))}.")
+
+        if operation == 3:
+            break
+
+if __name__ == "__main__":
+    main()
